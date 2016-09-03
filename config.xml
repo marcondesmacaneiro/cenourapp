@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widget"
+        xmlns:gap="http://phonegap.com/ns/1.0"
+        id="br.com.marcondesmacaneiro.cenouraapp"
+        version="1.0.0">
+
+        <name>
+          Cenoura App
+        </name>
+
+        <description>
+          Menu do restaurante...
+        </description>
+
+        <author href="http://marcondesmacaneiro.com.br"
+          email="marcondesmacaneiro@gmail.com">
+          Marcondes Maçaneiro
+        </author>
+
+
+        <preference name="orientation"
+          value="portrait" />
+        <preference name="fullscreen"
+          value="true" />
+        <preference name="permissions"
+          value="none" />
+        <preference name="phonegap-version"
+          value="cli-6.3.0" />
+
+        <icon src="icon.png" />
+
+        <gap:plataform name="android" />
+        <gap:splash src="splash.png" />
+
+
+</widget>

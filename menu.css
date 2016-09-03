@@ -1,62 +1,47 @@
-/* funcionamento */
 #opcao-bolos:checked ~ #menu-bebidas,
 #opcao-bebidas:checked ~ #menu-bolos {
     display: none;
 }
-
 input[type=radio] {
-    display: none;
+  display:none;
 }
 .menu {
-    width: 100%;
+  width: 100%;
+  margin-bottom: 100px;
 }
-
-/* decoracao */
 body {
-    background: #3D1A11;
-    font-family: sans-serif;
-    margin: 0;
-    text-align: center;
+  background: #3D1A11;
+  font-family: sans-serif;
+  margin: 0;
+  text-align: center;
 }
-
 label {
-    background: center top no-repeat #563429;
-    background-size: 4em;
-    color: white;
-    display: block;
-    font-size: 75%;
-    padding: 4em 0 1em;
-    text-transform: uppercase;
+  background: center top no-repeat #563429;
+  background-size: 4em;
+  color: white;
+  display: block;
+  font-size: 75%;
+  padding: 4em 0 1em;
+  text-transform: uppercase;
+  /* posicionamento */
+  width: 50%;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
 }
-    label[for=opcao-bolos] {
-        background-image: url(imagens/icone-bolos.svg);
-    }
-    label[for=opcao-bebidas] {
-        background-image: url(imagens/icone-bebidas.svg);
-    }
-    :checked + label {
-        background-color: #E4876D;
-    }
-
-/* posicionamento */
-label {
-    width: 50%;
-
-    position: fixed;
-    bottom: 0;
-    z-index: 1;
+label[for=opcao-bolos] {
+  background-image: url(imagens/icone-bolos.svg);
+  /* posicionamento */
+  left: 0;
 }
-    label[for=opcao-bolos] {
-        left: 0;
-    }
-    label[for=opcao-bebidas] {
-        right: 0;
-    }
-
-.menu {
-    margin-bottom: 100px;
+label[for=opcao-bebidas] {
+  background-image: url(imagens/icone-bebidas.svg);
+  /* posicionamento */
+  right: 0;
 }
-
+:checked + label {
+  background-color: #E4876D;
+}
 /* animado */
 html,
 body {
@@ -79,11 +64,4 @@ body {
 #opcao-bebidas:checked ~ .container-menus {
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
-}
-
-/* hack android velho */
-body { -webkit-animation: bugfix infinite 1s; }
-@-webkit-keyframes bugfix {
-  from { padding: 0; }
-  to { padding: 0; }
 }
